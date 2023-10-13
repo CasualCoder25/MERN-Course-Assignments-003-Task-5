@@ -1,25 +1,27 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css"
+import AgeCalculator from "./components/AgeCalculator"
+import "../node_modules/bootstrap/dist/css/bootstrap.min.css"
 
 function App() {
+  const AppStyle = {
+    width: "100%",
+    height: "100%",
+    minHeight: "100vh",
+  }
+  const AgeCalculatorStyle = {
+    width: "400px",
+    height: "300px",
+  }
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div
+      className="d-flex justify-content-center align-items-center"
+      style={AppStyle}
+    >
+      <div style={AgeCalculatorStyle}>
+        <AgeCalculator />
+      </div>
     </div>
-  );
+  )
 }
 
-export default App;
+export default App
